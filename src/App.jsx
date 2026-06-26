@@ -1,3 +1,4 @@
+// App.jsx
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/auth/Login'
 import ProtectedRoute from './routes/ProtectedRoute'
@@ -5,6 +6,10 @@ import ProtectedRoute from './routes/ProtectedRoute'
 // Doctor pages
 import DoctorDashboard from './pages/doctor/DoctorDashboard'
 import PatientConsultation from './pages/doctor/PatientConsultation'
+
+// Lab pages
+import LabDashboard from './pages/lab/LabDashboard'
+import TestOrder from './pages/lab/TestOrder'
 
 function App() {
   return (
@@ -24,6 +29,19 @@ function App() {
             <PatientConsultation />
           </ProtectedRoute>
         }/>
+
+        {/* Lab module */}
+        <Route path="/lab" element={
+          <ProtectedRoute allowedRole="lab">
+            <LabDashboard />
+          </ProtectedRoute>
+        }/>
+        <Route path="/lab/test-order" element={
+          <ProtectedRoute allowedRole="lab">
+            <TestOrder />
+          </ProtectedRoute>
+        }/>
+
       </Routes>
     </BrowserRouter>
   )
