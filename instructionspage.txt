@@ -1,3 +1,5 @@
+**Important rule for the team: never edit files in components/common/. Only edit files inside your own module folder. That's it.
+
 take a screenshot of each module first page and then upload it in claude and tell that we are working as a team each one has a separate module then paste the folder structure 
 src/
   components/
