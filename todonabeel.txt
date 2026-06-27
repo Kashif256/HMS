@@ -1,2 +1,4 @@
 perfect sidebar first 
 then other main ui like navbar and all then well dive into my doctor module ok
+if i have time i have to work on c3
+but before that within 28 complete backend project, and docker,aws
